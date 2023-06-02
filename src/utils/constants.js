@@ -1,0 +1,1 @@
+export const API_KEY = 'https://647879f6362560649a2ddc02.mockapi.io/api/v1/'
