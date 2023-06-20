@@ -9,7 +9,7 @@ const Context = React.createContext();
 const Provider = ({ children }) => {
   const [cars, setCars] = React.useState([]);
   const [selectedItem, setSelectedItem] = React.useState({});
-  console.log(cars);
+  
   const nameRef = React.useRef();
   const avatarRef = React.useRef();
   const speedRef = React.useRef();
