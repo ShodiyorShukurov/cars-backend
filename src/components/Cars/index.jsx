@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import "./cars.scss";
 import { CiCalendar } from "react-icons/ci";
 import { BsSpeedometer } from "react-icons/bs";
@@ -12,6 +11,7 @@ const Cars = () => {
     cars,
     nameRef,
     avatarRef,
+    priceRef,
     speedRef,
     colorRef,
     yearRef,
@@ -49,6 +49,15 @@ const Cars = () => {
                     placeholder="Img url"
                     ref={avatarRef}
                     defaultValue={selectedItem?.avatar}
+                    required
+                  />
+                  <input
+                    className="form-control mb-3"
+                    name="price"
+                    type="number"
+                    placeholder="Car price"
+                    ref={priceRef}
+                    defaultValue={selectedItem?.price}
                     required
                   />
                   <input
@@ -107,7 +116,7 @@ const Cars = () => {
                     />
                   </div>
                   <div className="card-cars__end">
-                    <p className="card-cars__price">Price {car.price}</p>
+                    <p className="card-cars__price">Price {car.price} $</p>
                     <p className="card-cars__name">{car.name} </p>
                     <div className="card-cars__text">
                       <p className="card-cars__desc year">
@@ -148,6 +157,9 @@ const Cars = () => {
                 </li>
               ))}
           </ul>
+          <button className="d-block mx-auto btn btn-success w-25 my-3">
+            <a className="text-white" href="/">GO HOME</a>
+          </button>
         </div>
       </div>
     </>
